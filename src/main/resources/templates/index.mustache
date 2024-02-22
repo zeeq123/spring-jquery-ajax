@@ -44,7 +44,7 @@
         boardList.forEach((board)=>{
             $("#board-box").append(render(board));
         });
-    }).fail((res) => {
+    }).fail(() => {
         //console.log(res);
         alert(res.responseJSON.msg);
     });
