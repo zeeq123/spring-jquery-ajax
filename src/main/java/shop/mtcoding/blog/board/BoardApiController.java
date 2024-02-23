@@ -11,6 +11,13 @@ import java.util.List;
 public class BoardApiController {
     private final BoardRepository boardRepository;
 
+    @PostMapping("/api/boards/{id}")
+    public ApiUtil<?> editById(@PathVariable int id, @RequestBody BoardRequest.WriteDTO requestDTO){
+        boardRepository.editById(id, requestDTO);
+
+        return new ApiUtil<>(null);
+    }
+
     @PostMapping("/api/boards")
     public ApiUtil<?> write(@RequestBody BoardRequest.WriteDTO requestDTO){
         boardRepository.insert(requestDTO);

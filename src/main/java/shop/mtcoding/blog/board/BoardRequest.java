@@ -10,4 +10,5 @@ public class BoardRequest {
         private String content;
         private String author;
     }
+
 }

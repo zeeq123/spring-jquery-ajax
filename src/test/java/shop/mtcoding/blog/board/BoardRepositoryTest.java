@@ -17,6 +17,7 @@ public class BoardRepositoryTest {
     @Autowired // Test에서 DI 하는 코드
     private BoardRepository boardRepository;
 
+
     @Test
     public void selectAll_test(){
         // given
